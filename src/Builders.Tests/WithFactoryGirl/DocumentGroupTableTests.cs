@@ -14,7 +14,7 @@ namespace Builders.Tests.WithFactoryGirl
             Builder.Define(() => new DocumentGroupTable
             {
                 DocumentGroupId = 123,
-                Naam = "My docs"
+                Name = "My docs"
             });
         }
 
@@ -23,15 +23,15 @@ namespace Builders.Tests.WithFactoryGirl
         {
             var dgt = Builder.Build<DocumentGroupTable>();
             Assert.That(dgt.DocumentGroupId, Is.EqualTo(123));
-            Assert.That(dgt.Naam, Is.EqualTo("My docs"));
+            Assert.That(dgt.Name, Is.EqualTo("My docs"));
         }
 
         [Test]
         public void CustomBuilder()
         {
-            var dgt = Builder.Build<DocumentGroupTable>(u => u.Naam = "My custom docs");
+            var dgt = Builder.Build<DocumentGroupTable>(u => u.Name = "My custom docs");
             Assert.That(dgt.DocumentGroupId, Is.EqualTo(123));
-            Assert.That(dgt.Naam, Is.EqualTo("My custom docs"));
+            Assert.That(dgt.Name, Is.EqualTo("My custom docs"));
         }
     }
 }

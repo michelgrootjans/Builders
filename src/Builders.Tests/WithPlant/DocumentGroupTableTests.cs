@@ -2,7 +2,7 @@
 using NUnit.Framework;
 using Plant.Core;
 
-namespace Builders.Tests.Plant
+namespace Builders.Tests.WithPlant
 {
     public class DocumentGroupBlueprint : IBlueprint
     {
@@ -10,11 +10,10 @@ namespace Builders.Tests.Plant
         {
             p.DefinePropertiesOf<DocumentGroupTable>(new
             {
-                Naam = "My docs",
+                Name = "My docs",
                 DocumentGroupId = 123
             });
         }
-
     }
 
     [TestFixture]
@@ -33,21 +32,16 @@ namespace Builders.Tests.Plant
         public void DefaultBuilder()
         {
             var dgt = plant.Create<DocumentGroupTable>();
-            Assert.That(dgt.Naam, Is.EqualTo("My docs"));
+            Assert.That(dgt.Name, Is.EqualTo("My docs"));
             Assert.That(dgt.DocumentGroupId, Is.EqualTo(123));
         }
 
         [Test]
         public void CustomBuilder()
         {
-            var dgt = plant.Create<DocumentGroupTable>(new
-            {
-                Naam = "My custom docs"
-            });
-            Assert.That(dgt.Naam, Is.EqualTo("My custom docs"));
+            var dgt = plant.Create<DocumentGroupTable>(new { Name = "My custom docs" });
+            Assert.That(dgt.Name, Is.EqualTo("My custom docs"));
             Assert.That(dgt.DocumentGroupId, Is.EqualTo(123));
         }
-
-
     }
 }

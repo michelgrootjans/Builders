@@ -43,7 +43,7 @@
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Plant\DocumentGroupTableTests.cs" />
+    <Compile Include="WithPlant\DocumentGroupTableTests.cs" />
     <Compile Include="Entities\DocumentGroupTable.cs" />
     <Compile Include="WithFactoryGirl\DocumentGroupTableTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
