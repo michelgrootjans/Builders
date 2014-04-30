@@ -43,7 +43,9 @@
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DocumentGroupTableTests.cs" />
+    <Compile Include="Plant\DocumentGroupTableTests.cs" />
+    <Compile Include="Entities\DocumentGroupTable.cs" />
+    <Compile Include="WithFactoryGirl\DocumentGroupTableTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
