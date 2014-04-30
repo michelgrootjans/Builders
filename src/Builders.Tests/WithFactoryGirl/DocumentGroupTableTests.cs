@@ -1,16 +1,17 @@
 ﻿using Builders.Tests.Entities;
 using NUnit.Framework;
+using Builder = FactoryGirl.NET.FactoryGirl; // HACK OM HET MOOI TE MAKEN !!
 
 namespace Builders.Tests.WithFactoryGirl
 {
     [TestFixture]
     public class DocumentGroupTableTests
     {
-        [SetUp]
+        [SetUp]     
         public void SetUp()
         {
-            FactoryGirl.NET.FactoryGirl.ClearFactoryDefinitions();
-            FactoryGirl.NET.FactoryGirl.Define(() => new DocumentGroupTable
+            Builder.ClearFactoryDefinitions();
+            Builder.Define(() => new DocumentGroupTable
             {
                 DocumentGroupId = 123,
                 Naam = "My docs"
@@ -20,7 +21,7 @@ namespace Builders.Tests.WithFactoryGirl
         [Test]
         public void DefaultBuilder()
         {
-            var dgt = FactoryGirl.NET.FactoryGirl.Build<DocumentGroupTable>();
+            var dgt = Builder.Build<DocumentGroupTable>();
             Assert.That(dgt.DocumentGroupId, Is.EqualTo(123));
             Assert.That(dgt.Naam, Is.EqualTo("My docs"));
         }
@@ -28,10 +29,9 @@ namespace Builders.Tests.WithFactoryGirl
         [Test]
         public void CustomBuilder()
         {
-            var dgt = FactoryGirl.NET.FactoryGirl.Build<DocumentGroupTable>(u => u.Naam = "My custom docs");
+            var dgt = Builder.Build<DocumentGroupTable>(u => u.Naam = "My custom docs");
             Assert.That(dgt.DocumentGroupId, Is.EqualTo(123));
             Assert.That(dgt.Naam, Is.EqualTo("My custom docs"));
         }
-
     }
 }
