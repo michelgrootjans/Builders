@@ -1,4 +1,6 @@
 Builders
 ========
 
-Example of using FactoryGirl
+Example of using several tools to build test objects:
+- FactoryGirl
+- Plant
