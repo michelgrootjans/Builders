@@ -1,7 +1,7 @@
 #Builders
 Example of using several tools to build test objects:
-- FactoryGirl
-- Plant
+- [FactoryGirl](https://github.com/JamesKovacs/FactoryGirl.NET)
+- [Plant](https://github.com/jbrechtel/plant)
 
 ##The Challenge
 Simplify the use of builders to generate test objects. Typical use:
