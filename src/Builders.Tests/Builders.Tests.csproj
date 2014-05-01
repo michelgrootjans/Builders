@@ -43,6 +43,7 @@
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Entities\Customer.cs" />
     <Compile Include="Entities\Person.cs" />
     <Compile Include="WithPlant\DocumentGroupTableTests.cs" />
     <Compile Include="Entities\DocumentGroupTable.cs" />
@@ -50,6 +51,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="WithPlant\RelationshipTests.cs" />
     <Compile Include="WithPlant\VariationTests.cs" />
+    <Compile Include="WithPlant\BuilderWithIntellisense.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
