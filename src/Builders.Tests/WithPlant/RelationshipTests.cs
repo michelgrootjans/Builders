@@ -20,6 +20,7 @@ namespace Builders.Tests.WithPlant
         }
     }
 
+    [TestFixture]
     public class RelationshipTests
     {
         private BasePlant plant;
