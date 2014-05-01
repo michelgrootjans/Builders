@@ -10,8 +10,8 @@ namespace Builders.Tests.WithPlant
         {
             p.DefinePropertiesOf(new Customer
             {
-                Name = "SmallSteps", 
-                Email = "info@smallsteps.com"
+                Name = "Microsoft", 
+                Email = "info@microsoft.com"
             });
         }
     }
@@ -31,16 +31,16 @@ namespace Builders.Tests.WithPlant
         public void DefaultCreation()
         {
             var customer = plant.Create<Customer>();
-            Assert.That(customer.Name, Is.EqualTo("SmallSteps"));
-            Assert.That(customer.Email, Is.EqualTo("info@smallsteps.com"));
+            Assert.That(customer.Name, Is.EqualTo("Microsoft"));
+            Assert.That(customer.Email, Is.EqualTo("info@microsoft.com"));
         }
 
         [Test]
         public void CustomCreation()
         {
-            var customer = plant.Create(new Customer {Email = "info@vmsw.be"});
+            var customer = plant.Create(new Customer {Email = "info@apple.com"});
             Assert.That(customer.Name, Is.Null); // watch out for this one
-            Assert.That(customer.Email, Is.EqualTo("info@vmsw.be"));
+            Assert.That(customer.Email, Is.EqualTo("info@apple.com"));
         }
     }
 }

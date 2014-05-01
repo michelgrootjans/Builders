@@ -45,6 +45,7 @@
   <ItemGroup>
     <Compile Include="Entities\Customer.cs" />
     <Compile Include="Entities\Person.cs" />
+    <Compile Include="WithPlant\BuilderWithSequences.cs" />
     <Compile Include="WithPlant\DocumentGroupTableTests.cs" />
     <Compile Include="Entities\DocumentGroupTable.cs" />
     <Compile Include="WithFactoryGirl\DocumentGroupTableTests.cs" />
