@@ -43,10 +43,12 @@
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Entities\Person.cs" />
     <Compile Include="WithPlant\DocumentGroupTableTests.cs" />
     <Compile Include="Entities\DocumentGroupTable.cs" />
     <Compile Include="WithFactoryGirl\DocumentGroupTableTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="WithPlant\RelationshipTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
