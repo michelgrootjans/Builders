@@ -49,6 +49,7 @@
     <Compile Include="WithFactoryGirl\DocumentGroupTableTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="WithPlant\RelationshipTests.cs" />
+    <Compile Include="WithPlant\VariationTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
